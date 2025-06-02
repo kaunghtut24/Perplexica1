@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "npm run db:push && next build",
     "prestart": "node generate-config.js",
-    "start": "next start"
+    "start": "node .next/standalone/server.js"
     "lint": "next lint",
     "format:write": "prettier . --write",
     "db:push": "drizzle-kit push"
@@ -65,8 +65,5 @@
     "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
-  },
-  "engines": {
-  "node": "18"
-}
+  }
 }
