@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run db:push && next build",
-    "start": "next start",
+    "prestart": "node generate-config.js",
+    "start": "next start"
     "lint": "next lint",
     "format:write": "prettier . --write",
     "db:push": "drizzle-kit push"
