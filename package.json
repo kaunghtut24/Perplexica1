@@ -4,10 +4,10 @@
   "license": "MIT",
   "author": "ItzCrazyKns",
   "scripts": {
+    "prestart": "node generate-config.js",
     "dev": "next dev",
     "build": "npm run db:push && next build",
-    "prestart": "node generate-config.js",
-    "start": "node .next/standalone/server.js"
+    "start": "next start",
     "lint": "next lint",
     "format:write": "prettier . --write",
     "db:push": "drizzle-kit push"
